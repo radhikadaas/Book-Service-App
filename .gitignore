@@ -1,0 +1,17 @@
+# Byte-compiled / virtual env
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+
+# Environment files
+.env
+
+# Alembic cache
+alembic/versions/__pycache__/
+
+# VSCode and OS junk
+.vscode/
+*.log
+.DS_Store
+Thumbs.db
