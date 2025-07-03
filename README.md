@@ -131,8 +131,7 @@ tests/
 
 ## 🔄 Architecture Overview
 - Paste the code into [Mermaid](https://mermaid.js.org/) for flow diagram
-
-```mermaid
+```bash
 flowchart TD
  subgraph Routers["Routers"]
         D1["routers/books.py"]
@@ -190,5 +189,8 @@ Open an issue or PR for questions, feedback, or contributions.
 * Ready for features like user auth and ratings
 
 ---
+
+## Full Documentaion
+- Docs - [Docs](https://docs.google.com/document/d/1Ppt5HdhlHlG0Z88yo7l-QH4slE6k2QJjiHOa2N5zGfE/edit?usp=sharing)
 
 > Made with ❤️ using FastAPI, PostgreSQL, and Redis
