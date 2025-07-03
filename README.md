@@ -131,6 +131,7 @@ tests/
 
 ## 🔄 Architecture Overview
 - Paste the code into [Mermaid](https://mermaid.js.org/) for flow diagram
+
 ```mermaid
 flowchart TD
  subgraph Routers["Routers"]

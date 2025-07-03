@@ -13,8 +13,8 @@ app = FastAPI()
 # models.Base.metadata.create_all(bind=engine)
 
 # Register routes
-app.include_router(books.router) #--> books wali file me se saare router import kiya hai
-app.include_router(reviews.router) # -> reviews wali file me se saare router import kiya hai
+app.include_router(books.router) # --> routers/books wali file me se saare router import kiya hai
+app.include_router(reviews.router) # -> routers/reviews wali file me se saare router import kiya hai
 
 # Root route
 @app.get("/")

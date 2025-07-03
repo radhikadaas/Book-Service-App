@@ -1,6 +1,6 @@
-# Pydantic schemas for validation
-#  input/output validation --> kya bejna hai, kya lena hai
-# app/schemas.py
+# work of this file is to define the schemas for the Book and Review models
+# These schemas are used for request validation and response formatting in the FastAPI application.
+
 from pydantic import BaseModel
 from typing import Optional
 from datetime import datetime

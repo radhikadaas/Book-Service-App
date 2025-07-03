@@ -1,10 +1,16 @@
-# app/models.py
+# this file defines the database models for the application.
+# It uses SQLAlchemy's declarative base to define the structure of the database tables.
+# It includes two models: Book and Review, with their respective fields and relationships.
+# The Book model represents a book with fields for title, author, and creation date.
+# The Review model represents a review for a book, with fields for content, rating, and creation date.
+# The Review model has a foreign key relationship with the Book model, allowing for easy retrieval of reviews associated with a specific book.
+# It also includes an index on the book_id field in the Review model for efficient querying.
 
 from sqlalchemy import Column, Integer, String, ForeignKey, Text, DateTime, Index
 from sqlalchemy.orm import relationship, declarative_base
 from datetime import datetime, UTC
 
-Base = declarative_base()  # 👈 Move it here
+Base = declarative_base()  
 
 class Book(Base):
     __tablename__ = "books"
