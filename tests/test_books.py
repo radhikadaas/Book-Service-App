@@ -1,6 +1,6 @@
-# ✅ Unit tests for /books and /reviews endpoints
-# tests/test_books.py
-
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from fastapi.testclient import TestClient
 from app.main import app
 import pytest
@@ -21,7 +21,7 @@ def created_book_id():
 
 
 def test_get_books():
-    """✅ Test GET /books endpoint - should return list of books"""
+    """Test GET /books endpoint - should return list of books"""
     response = client.get("/books")
     assert response.status_code == 200
     books = response.json()
@@ -32,7 +32,7 @@ def test_get_books():
 
 
 def test_post_review_for_book(created_book_id):
-    """✅ Test POST /books/{book_id}/reviews - should add a review"""
+    """Test POST /books/{book_id}/reviews - should add a review"""
     review_payload = {
         "content": "Awesome read!",
         "rating": 5
@@ -46,7 +46,7 @@ def test_post_review_for_book(created_book_id):
 
 
 def test_get_reviews_for_book(created_book_id):
-    """✅ Test GET /books/{book_id}/reviews - should list reviews"""
+    """Test GET /books/{book_id}/reviews - should list reviews"""
     response = client.get(f"/books/{created_book_id}/reviews")
     assert response.status_code == 200
     reviews = response.json()

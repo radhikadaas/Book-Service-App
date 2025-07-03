@@ -1,6 +1,7 @@
-# ✅ Integration test for Redis cache-miss flow with FastAPI & Redis
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-# tests/test_cache.py
 
 import pytest
 from httpx import AsyncClient, ASGITransport
@@ -26,7 +27,7 @@ async def test_books_cache_miss():
     data = response.json()
     assert isinstance(data, list)
 
-    # ✅ Redis should now be populated
+    # Redis should now be populated
     cached = await redis_client.get("books")
     assert cached is not None
     assert isinstance(json.loads(cached), list)
